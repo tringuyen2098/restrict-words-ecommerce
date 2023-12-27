@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('components/head'); %>
+
+	<body>
+		<div class="container mt-5 text-center">
+			<h1 class="color-blue">Thay từ hạn chế của Shopee, Tiktok, Facebook</h1>
+			<label for="sentence">Nội dung cần thay đổi: ##</label><br>
+
+			<div class="row">
+				<div class="col">
+					<textarea id="sentence" name="sentence" row="30" cols="50"
+						class="border border-primary custom-block-input"
+						placeholder="Để xuống dòng xin hãy thêm ký tự ## vào đầu hoặc cuối câu giúp mình nhé"></textarea><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<div class="form-group mt-20px border border-primary rounded">
+						<select class="form-control text-center" id="characters-split">
+							<option value=".">.</option>
+							<option value="*">*</option>
+							<option value="-">-</option>
+							<option value="+">+</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-10">
+					<button class="btn btn-outline-primary mt-20px" id="btn-send" onclick="getValue()">Thay đổi</button>
+
+					<button class="btn btn-outline-primary mt-20px" id="btn-loading" type="button" disabled>
+						<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+						<span class="sr-only">Loading...</span> Đang thay đổi
+					</button>
+				</div>
+			</div>
+
+			<div id="frame-result" class="border border-danger custom-block-result position-relative">
+				<div class="text-left">
+					<span id="result"></span>
+				</div>
+
+				<button id="btn-copy" type="button"
+					class="btn btn-outline-danger btn-sm position-absolute">Copy</button>
+			</div>
+
+			<%- include('components/shopee'); %>
+		</div>
+
+		<%- include('components/facebook'); %>
+		<%- include('components/feedback'); %>
+		<%- include('components/scripts'); %>
+	</body>
+
+</html>

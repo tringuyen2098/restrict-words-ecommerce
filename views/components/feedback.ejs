@@ -1,0 +1,85 @@
+<div id="feed-back-word" class="position-fixed custom-block-feed-back">
+    <div id="box-feedback" class="border border-primary rounded">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm col-8"></div>
+                <div class="col-sm col-4">
+                    <button id="btn-close-box" type="button" class="close text-primary" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="input-feedback"> <b>Từ góp ý</b>
+                            <span class="color-red">*</span>
+                        </label>
+                        <textarea placeholder="Bạn có thể nhập những từ cần thay thế để cải thiện tính năng."
+                            class="form-control" id="input-feedback" rows="10" name="input-feedback"
+                            required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="industry-group"><b>Nhóm ngành hàng</b></label>
+                        <select class="form-control" id="industry-group">
+                            <option value="2">Mỹ phẩm, chăm sóc sức khỏe và làm đẹp</option>
+                            <option value="3">Đồ chơi mẹ và bé</option>
+                            <option value="4">Điện thoại, máy tính bảng, laptop</option>
+                            <option value="5">Điện gia dụng, nhà cửa đời sống</option>
+                            <option value="6">Thể thao và du lịch</option>
+                            <option value="7">Sách, văn phòng phẩm và đồ dùng học tập</option>
+                            <option value="8">Ô tô, xe máy và phụ kiện</option>
+                            <option value="9">Thực phẩm và đồ uống</option>
+                            <option value="10">Thời trang</option>
+                            <!-- <option value="0">Khác</option> -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="other-industries">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="input-other-industry"><b>Nhóm ngành khác</b>
+                                <span class="color-red">*</span>
+                            </label>
+                            <input type="string" class="form-control" id="input-other-industry"
+                                name="input-other-industry"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col">
+                    <div id="noti-success" class="alert alert-success" role="alert">Gửi thành công</div>
+                    <div id="noti-error" class="alert alert-danger" role="alert">
+                        Có lỗi trong quá trình xử lý. Thử lại sau nhé.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col">
+                    <div class="form-group">
+                        <button class="btn btn-outline-primary mt-20px" id="btn-send-feedback"
+                            onclick="getValue()">Gửi</button>
+
+                        <button class="btn btn-outline-primary mt-20px" id="btn-loading-feedback" type="button"
+                            disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="sr-only">Loading...</span> Đang gửi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="btn-feed-back" class="btn btn-primary custom-button-feed-back">Góp ý từ</button>
+</div>
